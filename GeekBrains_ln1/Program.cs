@@ -66,6 +66,8 @@ namespace GeekBrains_ln1
                 profile.name, profile.surname, profile.age, profile.height, profile.weight);
         static string StringInterpolation(ProfileData profile) =>
             $"{profile.name} {profile.surname}, age: {profile.age}, height: {profile.height}cm, weight: {profile.weight}kg";
+
+
         /*
          * Ввести вес и рост человека.Рассчитать и вывести индекс массы тела(ИМТ) по формуле I=m/(h* h); 
          * где m — масса тела в килограммах, h — рост в метрах.
@@ -77,7 +79,7 @@ namespace GeekBrains_ln1
                  "Please, enter your height (cm) and weight (kg).\nUse space key or comma to split values.");
             string[] userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
             while (userInput.Length != 2)
-            {
+             {
                 Console.WriteLine("Sorry, the number of values you entered is exceeded.\nTry again.\n" +
                     "Please, enter your height (cm) and weight (kg).\nUse space key or comma to split values.");
                 userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
@@ -102,7 +104,60 @@ namespace GeekBrains_ln1
             BMIvalue <= 35 ? "obese Class I (Moderately obese)" :
             BMIvalue <= 40 ? "obese Class II (Severely obese)" :
             "obese Class III (Very severely obese)";
-        
+
+
+        /*
+         * а) Написать программу, которая подсчитывает расстояние между точками с координатами 
+         * x1, y1 и x2,y2 по формуле r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2).
+         * Вывести результат, используя спецификатор формата .2f(с двумя знаками после запятой);
+         * б) * Выполнить предыдущее задание, оформив вычисления расстояния между точками в виде метода.
+        */
+        struct Point 
+        {
+            public double xCoord, yCoord;
+            public Point(double X, double Y)
+            {
+                xCoord = X;
+                yCoord = Y;
+            }
+        }
+        static void MagnitudeCalculation()
+        {
+            Console.WriteLine
+                ("Welcome to the program of the magnitude calculation!\n" +
+                "To calculate the distance between two points at 2D space pleace enter its coordinates");
+            Console.WriteLine
+                 ("Please, enter values for X and Y of the point A.\nUse space key or comma to separate values.");
+            Point startPoint = InputCheck("A");
+            Point endPoint = InputCheck("B");
+            Console.WriteLine($"A Magnitude of the vector AB with points\n" +
+                $"A ({startPoint.xCoord}, {startPoint.yCoord})\n" +
+                $"B ({endPoint.xCoord}, {endPoint.yCoord}\n" +
+                $"was calculated and its value {VectorMagnitude(startPoint, endPoint):F2}");
+        }
+        static Point InputCheck(string pointName)
+        {
+            string[] userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
+            while (userInput.Length != 2)
+            {
+                Console.WriteLine("Sorry, the number of values you entered is exceeded.\nTry again.\n" +
+                    $"Please, enter values for X and Y of the point {pointName}.\nUse space key or comma to separate values.");
+                userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
+            }
+            double xCoord, Ycoord;
+            bool xIsNum = double.TryParse(userInput[0], out xCoord);
+            bool yIsNum = double.TryParse(userInput[1], out Ycoord);
+            if (xIsNum && yIsNum)
+                return new Point(xCoord, Ycoord);
+            else
+            {
+                Console.WriteLine("You entered invalid values.\nContinued using default values...");
+                return new Point(0, 0);
+            }
+        }
+        static double VectorMagnitude(Point startPoint, Point endPoint)=>
+             Math.Sqrt(Math.Pow(endPoint.xCoord - startPoint.xCoord, 2) + Math.Pow(endPoint.yCoord - startPoint.yCoord, 2));
+
         static void Main(string[] args)
         {
             //Profile();
@@ -125,4 +180,4 @@ namespace GeekBrains_ln1
 Достаточно решить 3 задачи.Записывайте в начало программы условие и свою фамилию. Все программы создавайте в одном решении. Со звездочками задания выполняйте в том случае, если вы решили задачи без звездочек.
 
    */
- 
+
