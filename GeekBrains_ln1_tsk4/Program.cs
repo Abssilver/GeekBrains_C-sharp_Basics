@@ -32,7 +32,7 @@ namespace GeekBrains_ln1_tsk4
         }
         static void Main(string[] args)
         {
-            //swap test
+            //swap tests
             double a = 6.2, b = 8.1;
             int c = -1, d = 0;
             bool e = true, f = false;

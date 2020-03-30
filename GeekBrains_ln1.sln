@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk4", "Geek
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk5", "GeekBrains_ln1_tsk5\GeekBrains_ln1_tsk5.csproj", "{12FBC281-8852-42F4-B4F9-85DA78F62FAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk6", "GeekBrains_ln1_tsk6\GeekBrains_ln1_tsk6.csproj", "{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk6", "GeekBrains_ln1_tsk6\GeekBrains_ln1_tsk6.csproj", "{F3E8C901-524A-4EBA-87C0-D9CD25E4C606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{12FBC281-8852-42F4-B4F9-85DA78F62FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12FBC281-8852-42F4-B4F9-85DA78F62FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12FBC281-8852-42F4-B4F9-85DA78F62FAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E8C901-524A-4EBA-87C0-D9CD25E4C606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E8C901-524A-4EBA-87C0-D9CD25E4C606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E8C901-524A-4EBA-87C0-D9CD25E4C606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E8C901-524A-4EBA-87C0-D9CD25E4C606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
