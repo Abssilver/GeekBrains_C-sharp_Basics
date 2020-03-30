@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1", "GeekBrains_ln1\GeekBrains_ln1.csproj", "{6EF8C375-74DA-48CC-A33D-C8EBBF2EF02B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk1", "GeekBrains_ln1_tsk1\GeekBrains_ln1_tsk1.csproj", "{B8412639-09B3-4782-B5E4-F36DE10AB580}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk1", "GeekBrains_ln1_tsk1\GeekBrains_ln1_tsk1.csproj", "{B8412639-09B3-4782-B5E4-F36DE10AB580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk2", "GeekBrains_ln1_tsk2\GeekBrains_ln1_tsk2.csproj", "{69551727-C8A0-46BD-82C5-C49CB371E2BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk2", "GeekBrains_ln1_tsk2\GeekBrains_ln1_tsk2.csproj", "{69551727-C8A0-46BD-82C5-C49CB371E2BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk3", "GeekBrains_ln1_tsk3\GeekBrains_ln1_tsk3.csproj", "{A360D49E-F2DC-4820-817D-EDEF05398515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk3", "GeekBrains_ln1_tsk3\GeekBrains_ln1_tsk3.csproj", "{A360D49E-F2DC-4820-817D-EDEF05398515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk4", "GeekBrains_ln1_tsk4\GeekBrains_ln1_tsk4.csproj", "{D6FEE5F5-FCA7-434B-9D5E-13D8B4BC7590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk4", "GeekBrains_ln1_tsk4\GeekBrains_ln1_tsk4.csproj", "{D6FEE5F5-FCA7-434B-9D5E-13D8B4BC7590}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk5", "GeekBrains_ln1_tsk5\GeekBrains_ln1_tsk5.csproj", "{12FBC281-8852-42F4-B4F9-85DA78F62FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk5", "GeekBrains_ln1_tsk5\GeekBrains_ln1_tsk5.csproj", "{12FBC281-8852-42F4-B4F9-85DA78F62FAA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBrains_ln1_tsk6", "GeekBrains_ln1_tsk6\GeekBrains_ln1_tsk6.csproj", "{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBrains_ln1_tsk6", "GeekBrains_ln1_tsk6\GeekBrains_ln1_tsk6.csproj", "{22D4A28A-3157-4A87-A0BF-6FB29CB08F22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6EF8C375-74DA-48CC-A33D-C8EBBF2EF02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6EF8C375-74DA-48CC-A33D-C8EBBF2EF02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6EF8C375-74DA-48CC-A33D-C8EBBF2EF02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6EF8C375-74DA-48CC-A33D-C8EBBF2EF02B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8412639-09B3-4782-B5E4-F36DE10AB580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8412639-09B3-4782-B5E4-F36DE10AB580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8412639-09B3-4782-B5E4-F36DE10AB580}.Release|Any CPU.ActiveCfg = Release|Any CPU
