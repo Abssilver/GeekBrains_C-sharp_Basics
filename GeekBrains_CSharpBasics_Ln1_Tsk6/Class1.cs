@@ -23,7 +23,7 @@ namespace ExtensionMethods
             string[] userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
             while (userInput.Length != numberOfItems)
             {
-                Console.WriteLine("Sorry, the number of values you entered is exceeded.\nTry again.\n" +
+                Console.WriteLine("Sorry, the values you entered are invalid.\nTry again.\n" +
                     $"Please, enter {conditionMsg}.\nUse space key or comma to split values.");
                 userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
             }

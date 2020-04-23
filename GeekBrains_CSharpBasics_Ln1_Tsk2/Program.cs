@@ -8,9 +8,14 @@ using System.Text.RegularExpressions;
 */
 namespace GeekBrains_CSharpBasics_Ln1_Tsk2
 {
-    class Program
+    public class Program
     {
-        static void BMI()
+        public static double Height => height;
+        public static double BMIvalue { get; private set; }
+
+        static double height, weight;
+
+        public static void BMI()
         {
             Console.Title = "BMI";
             Console.WriteLine
@@ -23,13 +28,13 @@ namespace GeekBrains_CSharpBasics_Ln1_Tsk2
                     "Please, enter your height (cm) and weight (kg).\nUse space key or comma to split values.");
                 userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
             }
-            double height, weight;
+            //double height, weight;
             bool heightIsNum = double.TryParse(userInput[0], out height);
             bool weightIsNum = double.TryParse(userInput[1], out weight);
             if (heightIsNum && weightIsNum)
             {
-                double bmi = weight / Math.Pow(height / 100, 2);
-                Console.WriteLine($"Your BMI is {bmi:F1} and this value is considered to be {BMIRecommendation(bmi)}");
+                BMIvalue = weight / Math.Pow(height / 100, 2);
+                Console.WriteLine($"Your BMI is {BMIvalue:F1} and this value is considered to be {BMIRecommendation(BMIvalue)}");
             }
             else
                 Console.WriteLine("You entered invalid values");

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+//Ремизов Павел
 /*
 Реализовать метод проверки логина и пароля. 
 На вход метода подается логин и пароль. 
