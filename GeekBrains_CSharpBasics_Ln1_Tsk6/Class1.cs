@@ -12,9 +12,9 @@ namespace ExtensionMethods
     public static class Helpers
     {
         /// <summary>
-        /// Returns true if the string is a number
+        /// Returns true if the string is  not a number
         /// </summary>
-        public static bool IsNaN(this string msg) => double.TryParse(msg, out double value);
+        public static bool IsNaN(this string msg) => !double.TryParse(msg, out double value);
         /// <summary>
         /// Check user input for condition
         /// </summary>
