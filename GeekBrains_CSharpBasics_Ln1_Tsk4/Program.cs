@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace GeekBrains_ln1_tsk4
+//Ремизов Павел
+/*
+ * Написать программу обмена значениями двух переменных:
+ * а) с использованием третьей переменной;
+ * б) * без использования третьей переменной. 
+*/
+
+namespace GeekBrains_CSharpBasics_Ln1_Tsk4
 {
     class Program
     {
-        //Ремизов Павел
-        /*
-         * Написать программу обмена значениями двух переменных:
-         * а) с использованием третьей переменной;
-         * б) * без использования третьей переменной. 
-        */
         static void SwapValue<T>(ref T a, ref T b)
         {
             T temporal = a;
@@ -23,7 +24,7 @@ namespace GeekBrains_ln1_tsk4
             b = b ^ a;
             a = a ^ b;
         }
-        public class Test 
+        public class Test
         {
             public int a;
             public Test(int a)
@@ -36,7 +37,7 @@ namespace GeekBrains_ln1_tsk4
             Console.Title = "Swapping System";
             Console.WriteLine
                 ("The Swap program welcomes you!\n" +
-                "To swap any numerical values, please enter them below\n"+
+                "To swap any numerical values, please enter them below\n" +
                 "Use space key or comma to split values.");
             string[] userInput = Regex.Split(Console.ReadLine(), @"\s|[,]\s|[,]");
             while (userInput.Length != 2)

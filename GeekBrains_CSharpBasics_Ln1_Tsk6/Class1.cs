@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
+//Ремизов Павел
+/*
+ * *Создать класс с методами, которые могут пригодиться в вашей учебе (Print, Pause).
+*/
+
 namespace ExtensionMethods
 {
     //add reference to .dll file to use ExtensionMethods
     public static class Helpers
     {
-        //Ремизов Павел
-        /*
-         * *Создать класс с методами, которые могут пригодиться в вашей учебе (Print, Pause).
-        */
         /// <summary>
         /// Returns true if the string is a number
         /// </summary>
@@ -31,9 +32,7 @@ namespace ExtensionMethods
         /// <summary>
         /// Math.Clamp for .NET Framework
         /// </summary>
-        public static T Clamp<T>(this T value, T min, T max) where T : IComparable<T>
-        {
-            return (value.CompareTo(min) < 0) ? min : (value.CompareTo(max) > 0) ? max : value;
-        }
+        public static T Clamp<T>(this T value, T min, T max) where T : IComparable<T> => 
+            (value.CompareTo(min) < 0) ? min : (value.CompareTo(max) > 0) ? max : value;
     }
 }
