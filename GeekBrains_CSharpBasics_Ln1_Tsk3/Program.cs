@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace GeekBrains_ln1_tsk3
+//Ремизов Павел
+/*
+ * а) Написать программу, которая подсчитывает расстояние между точками с координатами 
+ * x1, y1 и x2,y2 по формуле r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2).
+ * Вывести результат, используя спецификатор формата .2f(с двумя знаками после запятой);
+ * б) * Выполнить предыдущее задание, оформив вычисления расстояния между точками в виде метода.
+*/
+
+namespace GeekBrains_CSharpBasics_Ln1_Tsk3
 {
     class Program
     {
-        //Ремизов Павел
-        /*
-         * а) Написать программу, которая подсчитывает расстояние между точками с координатами 
-         * x1, y1 и x2,y2 по формуле r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2).
-         * Вывести результат, используя спецификатор формата .2f(с двумя знаками после запятой);
-         * б) * Выполнить предыдущее задание, оформив вычисления расстояния между точками в виде метода.
-        */
         struct Point
         {
             public double xCoord, yCoord;
@@ -23,6 +24,7 @@ namespace GeekBrains_ln1_tsk3
         }
         static void MagnitudeCalculation()
         {
+            Console.Title = "MagnitudeCalculation";
             Console.WriteLine
                 ("Welcome to the program of magnitude calculation!\n" +
                 "To calculate the distance between two points at 2D space pleace enter its coordinates");
@@ -60,10 +62,12 @@ namespace GeekBrains_ln1_tsk3
         static double VectorMagnitude(Point startPoint, Point endPoint) =>
              Math.Sqrt(Math.Pow(endPoint.xCoord - startPoint.xCoord, 2) + Math.Pow(endPoint.yCoord - startPoint.yCoord, 2));
 
-
         static void Main(string[] args)
         {
             MagnitudeCalculation();
+            Console.ReadKey();
         }
     }
 }
+
+

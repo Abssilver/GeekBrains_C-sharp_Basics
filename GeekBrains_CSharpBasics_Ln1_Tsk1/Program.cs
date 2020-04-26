@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace GeekBrains_ln1_tsk1
+//Ремизов Павел
+/*
+ * Написать программу «Анкета». Последовательно задаются вопросы(имя, фамилия, возраст, рост, вес). 
+ * В результате вся информация выводится в одну строчку:
+ * а) используя склеивание;
+ * б) используя форматированный вывод;
+ * в) используя вывод со знаком $.
+*/
+namespace GeekBrains_CSharpBasics_Ln1_Tsk1
 {
     class Program
     {
-        //Ремизов Павел
-        /*
-         * Написать программу «Анкета». Последовательно задаются вопросы(имя, фамилия, возраст, рост, вес). 
-         * В результате вся информация выводится в одну строчку:
-         * а) используя склеивание;
-         * б) используя форматированный вывод;
-         * в) используя вывод со знаком $.
-        */
         public class ProfileData
         {
             public string name, surname;
@@ -20,17 +20,21 @@ namespace GeekBrains_ln1_tsk1
         }
         static void Profile()
         {
+            Console.Title = "Profile Program";
             ProfileData userdata = new ProfileData();
             Console.WriteLine
                 ("The Profile program welcomes you!\nPlease, answer to next questions.");
             Console.WriteLine("What is your name?");
             userdata.name = Console.ReadLine();
-            Console.WriteLine("Ok, and your surname?");
+            Console.WriteLine($"Ok, {userdata.name}, and your surname?");
             userdata.surname = Console.ReadLine();
             userdata.age = (int)NumberCheck("How old are you? (number)");
             userdata.height = NumberCheck("What is your height? (number / cm)");
             userdata.weight = NumberCheck("And what about your weight? (number / kg)");
-            Console.WriteLine("Solution to check:\na - for concatination\nb - for composit formatting\nc - for string interpolation");
+            Console.WriteLine
+                ("Solution to check:\na - for concatination\n" +
+                                     "b - for composit formatting\n" +
+                                     "c - for string interpolation");
             string solution = Console.ReadLine();
             Console.WriteLine("Your profile data:");
             switch (solution)
@@ -69,6 +73,7 @@ namespace GeekBrains_ln1_tsk1
         static void Main(string[] args)
         {
             Profile();
+            Console.ReadKey();
         }
     }
 }

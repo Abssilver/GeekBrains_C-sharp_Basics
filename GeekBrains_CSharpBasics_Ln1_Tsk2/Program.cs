@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace GeekBrains_ln1_tsk2
+//Ремизов Павел
+/*
+ * Ввести вес и рост человека.Рассчитать и вывести индекс массы тела(ИМТ) по формуле I=m/(h* h); 
+ * где m — масса тела в килограммах, h — рост в метрах.
+*/
+namespace GeekBrains_CSharpBasics_Ln1_Tsk2
 {
     class Program
     {
-        //Ремизов Павел
-        /*
-         * Ввести вес и рост человека.Рассчитать и вывести индекс массы тела(ИМТ) по формуле I=m/(h* h); 
-         * где m — масса тела в килограммах, h — рост в метрах.
-        */
         static void BMI()
         {
+            Console.Title = "BMI";
             Console.WriteLine
                  ("The program of calculating your body mass index (BMI) welcomes you!\n" +
                  "Please, enter your height (cm) and weight (kg).\nUse space key or comma to split values.");
@@ -46,6 +47,7 @@ namespace GeekBrains_ln1_tsk2
         static void Main(string[] args)
         {
             BMI();
+            Console.ReadKey();
         }
     }
 }
