@@ -14,7 +14,7 @@ namespace ExtensionMethods
         /// <summary>
         /// Returns true if the string is  not a number
         /// </summary>
-        public static bool IsNaN(this string msg) => !double.TryParse(msg, out double value);
+        public static bool IsNaN(this string msg) => !double.TryParse(msg, out double _);
         /// <summary>
         /// Check user input for condition
         /// </summary>
