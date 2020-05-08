@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TestApp
 {
@@ -15,9 +16,77 @@ namespace TestApp
         static void Main(string[] args)
         {
             //RandomFill();
-            //Tabulation();
-            GuessANumber();
+            Tabulation();
+            //GuessANumber();
+            //Reader();
+            //ReadFromFileWithException();
             Console.ReadKey();
+        }
+        static void Reader()
+        {
+            // Создаем объект sr и связываем его с файлом data.txt.
+            StreamReader sr = new StreamReader("..\\..\\data.txt");
+            // Считаем количество чисел.
+            int n = int.Parse(sr.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                int a = int.Parse(sr.ReadLine());
+                Console.WriteLine(a);
+            }
+            // Освобождаем файл data.txt для использования другими программами.
+            sr.Close();
+        }
+
+        static void ReadFromFileWithException()
+        {
+            StreamReader sr = new StreamReader("..\\..\\data.txt");
+            int sum = 0, count = 0;
+            while (!sr.EndOfStream)  // Пока не конец потока (файла)
+            {
+                string s = sr.ReadLine();
+                Console.WriteLine("Считали строку:" + s);
+                try
+                {
+                    int a = int.Parse(s);
+                    sum = sum + a;
+                    count++;
+                    Console.WriteLine("{0}.Преобразовали в число:{1}", count, a);
+                }
+                // В экземпляре exc класса Exception будет
+                // храниться информация об ошибке.
+                catch (Exception exc)
+                {
+                    Console.WriteLine(exc.Message);
+                }
+            }
+            sr.Close();
+            Console.WriteLine("Среднее арифметическое:{0:f2}", (double)sum / count);
+            // Обратите внимание! Если не поставить явное преобразование типов перед sum, sum/count получит целое число. Попробуйте убрать (double) перед sum.
+        }
+
+        class MyArray
+        {
+            int[] a;  // он приватный
+            public MyArray(int n)
+            {
+                a = new int[n];
+            }
+            // либо мы делаем метод для получения элемента массива
+            public int Get(int i)
+            {
+                return a[i];
+            }
+            // и метод для того, чтобы задать элемент
+            public void Set(int i, int value)
+            {
+                a[i] = value;
+            }
+            // либо создаем индексируемое свойство
+            public int this[int i]
+            {
+                get { return a[i]; }
+                set { a[i] = value; }
+            }
         }
         static void GuessANumber()
         {

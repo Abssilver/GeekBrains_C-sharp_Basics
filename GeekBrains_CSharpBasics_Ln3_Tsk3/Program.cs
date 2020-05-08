@@ -49,8 +49,8 @@ namespace GeekBrains_CSharpBasics_Ln3_Tsk3
         }
         class Fraction
         {
-            public int Numerator { get; private set; }
-            public int Denominator { get; private set; }
+            public int Numerator { get; private set; } = 0;
+            public int Denominator { get; private set; } = 1;
             public double decimalFraction => (double)Numerator / (double)Denominator;
             public Fraction(int numerator, int denominator)
             {
@@ -63,7 +63,7 @@ namespace GeekBrains_CSharpBasics_Ln3_Tsk3
                 if (!this.Numerator.Equals(0))
                     FractionSimplification(this.Numerator, this.Denominator);
             }
-            public Fraction() => new Fraction(default, 1);
+            public Fraction() { }
             public void FractionSimplification(int numerator, int denominator)
             {
                 numerator = numerator > 0 ? numerator : -numerator;
