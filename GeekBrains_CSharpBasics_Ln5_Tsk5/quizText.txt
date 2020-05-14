@@ -1,0 +1,79 @@
+﻿True:In Japan, students write on a blackboard with a color ink brush.
+True:Cockroaches exist on Earth for 250 million years. They have not undergone any evolutionary changes since then.
+True:97% of people who are offered a new pen will write their name first.
+True:Peanuts are used in the production of dynamite.
+True:In the XVIII century, cockroaches had a bad habit of hiding under the clothers. So the soldiers who fought against the armies of Frederick brought cockroaches to Russian lands. One way or another, but before that there were no cockroaches in Moscow or Petersburg.
+True:In Chicago, a woman driver can be fined if one of her eyes is covered with hair or a hat.
+True:Worn paper money in the United States is not burned for environmental reasons, but is pulverized.
+True:Owls are the only birds that, like a person blinking, lower the upper eyelid.
+True:Clown Kuklachev uses a gun to train cats.
+True:Boiling water will extinguish a fire faster than cold water.
+True:Russian laws of the XI century were severe. The penalty for a cut off finger was four times less than the penalty for a torn block of beard.
+True:After the end of the Olympics, the Olympic village in Lake Placid (USA) began to be used as a prison.
+True:April 3-4, 1974. In just a day, one hundred forty-eight tornadoes swept across the south and midwestern United States.
+True:A fountain pen was invented in ancient Egypt.
+True:The cloud around the nucleus of the comet, observed in 1811, had a diameter of two million kilometers.
+True:The moon is a dark star, has no light of its own.
+True:Lee Redmond, having nails with a total length of 7 meters 51 centimeters, dresses independently.
+True:The total population of India and China exceeds one third of the population of our planet.
+True:In birds of prey, females are larger and stronger than males.
+True:Woodpeckers die from a concussion.
+True:In southern countries, cockroaches reach the size of a mouse.
+True:The highest recorded wave - the tsunami - was more than five hundred meters high.
+True:Spanish artist El Greco was really Greek.
+True:Some types of bamboo can grow up to ninety centimeters per day.
+True:Ancient Romans used mouse brain powder instead of toothpaste.
+True:Termite mound consists of earth, saliva and manure.
+True:In Waterloo, Nebraska, hairdressers are not allowed to eat onions while working.
+True:Eucalyptus - the tallest and fastest growing tree in the world.
+True:Australia has three times more sheep than residents.
+True:Silk in China was valued so dearly that it was used instead of money.
+True:The Great Wall of China is visible from space.
+True:After lunch, to refresh the breath, the Indians chew spices.
+True:An octopus bites its victim with poisonous saliva, which is almost harmless to humans.
+True:The skin of an elephant is two centimeters thick. But they feel the bite of even the smallest insect.
+True:At elephants milk tusks first grow, and in a year real ones grow instead of them.
+True:In Africa, fortified pencils are produced for children who are used to chewing on anything.
+True:Ballpoint pen was first used only by military pilots.
+True:Spiders feed on their own web.
+True:Spartan warriors sprayed hair before the battle.
+True:In the morning you are taller than in the evening.
+True:Children can hear higher sounds than adults.
+True:A chameleon can go without food for a long time, almost a whole year.
+True:Elk is a species of deer.
+True:Dolphins are small whales.
+True:In some countries, firefly beetles are used as lighting devices.
+True:Scrooge's lucky coin was 10 cents.
+True:By chirping a house cricket, you can determine the air temperature.
+True:The elephant, meeting with an unfamiliar relative, greets in the following way - puts a trunk in his mouth.
+False:The 3 most stupid dog breeds are the Border Collie, the poodle and the German Shepherd. The most intelligent are the Afghan Hound, the Bulldog and the Chow Chow.
+False:Most Rolls Royces per capita in England.
+False:In 1941, there was such a shortage of soap in Mexico. It was so expensive that it performed the function of money.
+False:Only 5 out of 7 thefts are revealed in the world.
+False:The sperm whale's tongue weighs more than the average elephant.
+False:Red-haired women often go bald.
+False:The horse snorts to warn others of danger.
+False:A kilometer and a half swim, then 40 km on a bicycle and 10 km on a run - this is a spy all-around.
+False:Australia uses disposable blackboards.
+False:On Venus a day is longer than a year.
+False:The interplanetary medium is emptiness.
+False:The tallest modern man is three meters tall.
+False:Roy Sullivan (USA) survived after twenty lightning bolts hit him at different intervals.
+False:The largest Imperial Palace is in Japan.
+False:The fastest humanoid robot created in the USA.
+False:The largest animal armor was made for knightly horses.
+False:The plane takes off faster if it accelerates in the wind direction.
+False:Chickens swallow pebbles because that’s how they get minerals.
+False:Ultraviolet rays pass well through window glass.
+False:In the tadpole, the front paws grow earlier than the hind legs.
+False:The speed and acceleration of a vertically thrown ball at its top lifting point are zero.
+False:Egyptian Sphinx - one of the Wonders of the World;
+False:Carrot extract is added to some types of colored pencils for greater lead stability.
+False:In one Korean circus, two crocodiles were taught to dance a waltz.
+False:Growing mice become rats.
+False:Bats can receive radio signals.
+False:Most turnips are grown in Russia.
+False:Hans Christian Andersen's real name was Swensen.
+False:In medicine, the diagnosis of Munchausen syndrome is made to a patient who lies a lot.
+False:The cow is the first tamed animal.
+False:During hibernation, a bear sucks a paw.
