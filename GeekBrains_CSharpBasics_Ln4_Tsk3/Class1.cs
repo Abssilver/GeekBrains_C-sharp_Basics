@@ -59,9 +59,7 @@ namespace GeekBrains_CSharpBasics_Ln4_Tsk3
                     int.TryParse(strReader.ReadLine(), out int length);
                     array = new int[length];
                     for (int i = 0; i < length; i++)
-                    {
                         int.TryParse(strReader.ReadLine(), out array[i]);
-                    }
                 }
             }
             else

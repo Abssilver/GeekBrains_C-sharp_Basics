@@ -43,16 +43,19 @@ namespace GeekBrains_CSharpBasics_Ln4_Tsk1
         static int FindTheNumberOfPairs(int [] array, bool isWebsite)
         {
             int result=0;
-            for (int i = 0; i < array.Length - 1; i++)
+            if (isWebsite)
             {
-                if (!isWebsite)
-                {
-                    if (DesiredFeature(array[i], array[i + 1]))
-                        result++;
-                }
-                else
+                for (int i = 0; i < array.Length - 1; i++)
                 {
                     if (DesiredFeatureWebsiteVersion(array[i], array[i + 1]))
+                        result++;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    if (DesiredFeature(array[i], array[i + 1]))
                         result++;
                 }
             }
