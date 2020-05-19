@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 б) подсчитать сколько студентов в возрасте от 18 до 20 лет на каком курсе учатся (*частотный массив);
 в) отсортировать список по возрасту студента;
 г) *отсортировать список по курсу и возрасту студента;
+д) разработать единый метод подсчета количества студентов по различным параметрам
+выбора с помощью делегата и методов предикатов.
 */
 namespace GeekBrains_CSharpBasics_Ln6_Tsk3
 {
@@ -52,6 +54,30 @@ namespace GeekBrains_CSharpBasics_Ln6_Tsk3
 
     class Program
     {
+        static bool IsYoungerThanTwenty(string[] studentInfo)
+        {
+            int.TryParse(studentInfo[5], out int age);
+            return age > 0 && age < 20;
+        }
+        static bool IsStudentOfYale(string[] studentInfo) => studentInfo[2].ToLower().Equals("yale");
+        public static int FindTheNumberOfStudentsByCondition(ArrayList list, Func<string[], bool> comparer) =>
+            list.Cast<string[]>().Where(x => comparer(x)).Count();
+        #region Classic
+        /*{
+            int number = 0;
+            try
+            {
+                foreach (string[] element in list)
+                    if (comparer(element))
+                        number++;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+            return number;
+        }*/
+        #endregion 
         /* base
         Сколько всего студентов?
         Сколько всего бакалавров?
@@ -84,6 +110,12 @@ namespace GeekBrains_CSharpBasics_Ln6_Tsk3
             DisplayResults(fileData);
             stopwatch.Stop();
             Console.WriteLine(stopwatch.Elapsed);
+            Console.WriteLine
+                ("There (is)are {0} student(s) who younder than 20 years.",
+                FindTheNumberOfStudentsByCondition(fileData, IsYoungerThanTwenty));
+            Console.WriteLine
+                ("There (is)are {0} student(s) who studies in Yale.",
+                FindTheNumberOfStudentsByCondition(fileData, new Func<string[], bool>(IsStudentOfYale)));
             Console.ReadKey();
         }
         static void ArrayAnalysis(ArrayList data)
