@@ -5,9 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Threading;
+using System.Drawing;
 
 namespace TestApp
 {
+    #region ObserverPattern
+    delegate void Action();
+    class A
+    {
+        public A()
+        {
+            B.FlagIsTrue = new Action(DoSomething);
+        }
+        private void DoSomething()
+        {
+            Console.WriteLine("Oppa!");
+        }
+    }
+    class B
+    {
+        static public Action FlagIsTrue;
+        bool flag;
+        void SetFlag(bool _flag)
+        {
+            flag = _flag;
+            if (flag) FlagIsTrue();
+        }
+    }
+    #endregion
     class Program
     {
 
@@ -21,9 +49,65 @@ namespace TestApp
             //GuessANumber();
             //Reader();
             //ReadFromFileWithException();
-            Lesson6_3();
+            //Lesson7_3();
+            //Pattern();
+            RegexExample();
             Console.ReadKey();
         }
+        static void RegexExample()
+        {
+            string input = "capybara,squirrel,chipmunk,porcupine,gopher," +
+                       "beaver,groundhog,hamster,guinea pig,gerbil," +
+                       "chinchilla,prairie dog,mouse,rat";
+            string pattern = @"\G(\w+\s?\w*),?";
+            Match match = Regex.Match(input, pattern);
+            while (match.Success)
+            {
+                Console.WriteLine(match.Value);
+                match = match.NextMatch();
+            }
+        }
+        /* using System.Timers;
+        public static void Lesson7_1()
+        {
+            Timer timer = new Timer();
+            timer.Elapsed += new ElapsedEventHandler(TimerEventHandler);
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            Console.ReadKey();
+        }
+        private static void TimerEventHandler(object sender, ElapsedEventArgs e)
+        {
+            Console.WriteLine(sender.ToString());
+            Console.WriteLine(e.SignalTime.ToString());
+        }
+        */
+        static void Lesson7_3()
+        {
+            Application.Run(new MyForm());
+        }
+        class MyForm : Form
+        {
+            public MyForm()
+            {
+                Text = "My Inherited Form";
+                Width *= 2;
+                Click += MyClicker;
+                Paint += MyPainter;
+            }
+            void MyClicker(object objSrc, EventArgs args)
+            {
+                MessageBox.Show("The button has been clicked!", "Click");
+            }
+            void MyPainter(object objSrc, PaintEventArgs args)
+            {
+                Graphics grfx = args.Graphics;
+                grfx.DrawString("Hello, Windows Forms", Font,
+                SystemBrushes.ControlText, 0, 0);
+            }
+        }
+
+        #region Lesson 6
         delegate void MessageHandler(string message);
         static void Lesson6_3()
         {
@@ -86,7 +170,7 @@ namespace TestApp
             // Упрощение(с C# 2.0). Использование анонимного метода
             Table(delegate (double x){ return x * x; }, 0, 3);
         }
-
+        #endregion
         #region Lesson 5
         static void Lesson5_5()
         {
