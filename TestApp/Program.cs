@@ -21,9 +21,72 @@ namespace TestApp
             //GuessANumber();
             //Reader();
             //ReadFromFileWithException();
-            Lesson5_1();
+            Lesson6_3();
             Console.ReadKey();
         }
+        delegate void MessageHandler(string message);
+        static void Lesson6_3()
+        {
+            MessageHandler handler = delegate
+            {
+                Console.WriteLine("анонимный метод");
+            };
+            handler("hello world!");    // анонимный метод
+            Console.Read();
+        }
+        static void Lesson6_2()
+        {
+            DirectoryInfo dir = new DirectoryInfo(@"C:\");
+            printDirect(dir);
+            DirectoryInfo[] subDirects = dir.GetDirectories();
+            Console.WriteLine("Найдено {0} подкаталогов", subDirects.Length);
+            foreach (DirectoryInfo d in subDirects)
+            {
+                printDirect(d);
+            }
+        }
+        static void printDirect(DirectoryInfo dir)
+        {
+            //DirectoryInfo dir = new DirectoryInfo(".");//(@"C:\Temp")
+            Console.WriteLine("***** " + dir.Name + " *****");
+            Console.WriteLine("FullName: {0}", dir.FullName);
+            Console.WriteLine("Name: {0}", dir.Name);
+            Console.WriteLine("Parent: {0}", dir.Parent);
+            Console.WriteLine("Creation: {0}", dir.CreationTime);
+            Console.WriteLine("Attributes: {0}", dir.Attributes.ToString());
+            Console.WriteLine("Root: {0}", dir.Root);
+        }
+        public static void Table(Fun F, double x, double b)
+        {
+            Console.WriteLine("----- X ----- Y -----");
+            while (x <= b)
+            {
+                Console.WriteLine("| {0,8:0.000} | {1,8:0.000} |", x, F(x));
+                x += 1;
+            }
+            Console.WriteLine("---------------------");
+        }
+        public delegate double Fun(double x);
+        public static double MyFunc(double x)
+        {
+            return x * x * x;
+        }
+        static void Lesson6_1()
+        {
+            // Создаем новый делегат и передаем ссылку на него в метод Table
+            Console.WriteLine("Таблица функции MyFunc:");
+            // Параметры метода и тип возвращаемого значения, должны совпадать с делегатом
+            Table(new Fun(MyFunc), -2, 2);
+            Console.WriteLine("Еще раз та же таблица, но вызов организован по новому");
+            // Упрощение(c C# 2.0).Делегат создается автоматически.            
+            Table(MyFunc, -2, 2);
+            Console.WriteLine("Таблица функции Sin:");
+            Table(Math.Sin, -2, 2);      // Можно передавать уже созданные методы
+            Console.WriteLine("Таблица функции x^2:");
+            // Упрощение(с C# 2.0). Использование анонимного метода
+            Table(delegate (double x){ return x * x; }, 0, 3);
+        }
+
         #region Lesson 5
         static void Lesson5_5()
         {
