@@ -82,12 +82,12 @@ namespace GeekBrains_CSharpBasics_Ln6_Tsk5
                 data[maxIndex] = -1;
             }
             if (Math.Abs(indexArray[0] - indexArray[1]) >= positionDifference)
-                return valuesArray[0] * valuesArray[1];
+                return (long)valuesArray[0] * (long)valuesArray[1];
             List<long> maxValueList = new List<long>();
             for (int i = 0; i < positionDifference; i++)
                 for (int j = 0; j < positionDifference; j++)
                     if (i != j)
-                        maxValueList.Add(valuesArray[i] * valuesArray[j]);
+                        maxValueList.Add((long)valuesArray[i] * (long)valuesArray[j]);
             return maxValueList.Max();
         }
         static int MaximumProductOfTwoElementsSlow(int[] data, int positionDifference)//another try
