@@ -87,9 +87,11 @@ namespace TestApp
             //Lesson8_2();
             //Pattern();
             //RegexExample();
-            val += Quiz();
-            Console.WriteLine(val);
+            //val += Quiz();
+            //List<int> a = default;
+            //Console.WriteLine(a==null );
             Console.ReadKey();
+            //int[][] a = new int[10][];
 
         }
         #region Lesson8
