@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ArrayOfExpense xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Expense>
+    <Text>Water</Text>
+    <Category>utilities</Category>
+    <Value>95.500000</Value>
+  </Expense>
+  <Expense>
+    <Text>Electricity</Text>
+    <Category>utilities</Category>
+    <Value>45.60</Value>
+  </Expense>
+  <Expense>
+    <Text>Rent</Text>
+    <Category>utilities</Category>
+    <Value>600.00</Value>
+  </Expense>
+  <Expense>
+    <Text>Internet</Text>
+    <Category>communications</Category>
+    <Value>10.00</Value>
+  </Expense>
+  <Expense>
+    <Text>Mobile Phone</Text>
+    <Category>communications</Category>
+    <Value>8.50</Value>
+  </Expense>
+  <Expense>
+    <Text>Shop</Text>
+    <Category>food</Category>
+    <Value>756.85</Value>
+  </Expense>
+  <Expense>
+    <Text>Theater</Text>
+    <Category>entertainment</Category>
+    <Value>30.86</Value>
+  </Expense>
+</ArrayOfExpense>

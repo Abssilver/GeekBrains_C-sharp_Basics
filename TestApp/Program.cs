@@ -9,6 +9,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Threading;
 using System.Drawing;
+using System.Reflection;
+using System.Xml.Serialization;
 
 namespace TestApp
 {
@@ -36,9 +38,42 @@ namespace TestApp
         }
     }
     #endregion
+    #region Serialization
+    [Serializable]
+    public class Student
+    {
+        // Чтобы поля можно было сериализовать, они должны быть открытыми 
+        public string firstName;
+        public string lastName;
+        // Если поле не открыто, оно не будет сериализоваться
+        int age;
+        // Если мы хотим не нарушать принцип инкапсуляции и при этом сериализовать поле, то должны реализовать доступ к нему через публичное свойство        
+        public int Age
+        {
+            get { return age; }
+            set { if (value > 0) age = value; }
+        }
+        // Если есть отличный от конструктора по умолчанию конструктор, то пустой конструктор автоматически не создается
+        public Student(string firstName, string lastName, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+        //...в этом случае для сериализации требуется самим создать пустой конструктор
+        public Student()
+        {
+        }
+    }
+    #endregion
     class Program
     {
-
+        static int val = 0;
+        static int Quiz()
+        {
+            val = val + 42;
+            return 1;
+        }
         static int value;
         static string console_message = "Введите число:";
 
@@ -49,10 +84,80 @@ namespace TestApp
             //GuessANumber();
             //Reader();
             //ReadFromFileWithException();
-            //Lesson7_3();
+            //Lesson8_2();
             //Pattern();
-            RegexExample();
+            //RegexExample();
+            //val += Quiz();
+            //List<int> a = default;
+            //Console.WriteLine(a==null );
             Console.ReadKey();
+            //int[][] a = new int[10][];
+
+        }
+        #region Lesson8
+        
+        static void SaveAsXmlFormat(List<Student> obj, string fileName)
+        {
+            // Сериализовать список объектов не представляется большой проблемой
+            // Дело в том, что все объекты в C# наследуются от класса Object,
+            // который представляет собой дерево объектов
+            // подробней читайте у Эндрю Троелсена “Язык программирования C# 5.0”
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Student>));
+            // Создаем файловый поток (проще говоря, создаем файл)
+            Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            // В этот поток записываем сериализованные данные (записываем xml-файл)
+            xmlFormat.Serialize(fStream, obj);
+            fStream.Close();
+        } 
+        static void LoadFromXmlFormat(ref List<Student> obj, string fileName)
+        {
+            // Считать класс List<Student> из файла fileName формата XML
+            // Обратите внимание, что этот пример показывает нам, что List<Student> не более, чем класс, его структура более сложная и для ее понимания потребуется некоторый опыт
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Student>));
+            Stream fStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            obj = (List<Student>)xmlFormat.Deserialize(fStream);
+            fStream.Close();
+        }
+        static void Lesson8_2()
+        {
+            List<Student> list = new List<Student>();
+            list.Add(new Student("Иван", "Иванов", 20));
+            list.Add(new Student("Петр", "Петров", 21));
+            SaveAsXmlFormat(list, "data.xml");
+            LoadFromXmlFormat(ref list, "data.xml");
+            foreach (var v in list)
+            {
+                Console.WriteLine("{0} {1} {2}", v.firstName, v.lastName, v.Age);
+            }
+            Console.ReadKey();
+        }
+        static void Lesson8_1()
+        {
+            DateTime dateTime = new DateTime();
+            //dateTime.DayOfWeek
+            Console.WriteLine(GetPropertyInfo(dateTime, "DayOfWeek").CanRead);
+            Console.WriteLine(GetPropertyInfo(dateTime, "DayOfWeek").CanWrite);
+            Console.WriteLine(GetPropertyInfo(dateTime, "DayOfWeek").GetValue(dateTime, null));
+        }
+        static PropertyInfo GetPropertyInfo(object obj, string str)
+        {
+            return obj.GetType().GetProperty(str);
+        }
+        #endregion
+
+        static void InsertionSort(ref int[] a)
+        {
+            for (int j = 0; j < a.Length; j++)
+            {
+                int key = a[j];
+                int i = j - 1;
+                while (i >= 0 && a[i] > key)
+                {
+                    a[i + 1] = a[i];
+                    i--;
+                }
+                a[i + 1] = key;
+            }
         }
         static void RegexExample()
         {
